@@ -1,4 +1,4 @@
 
 export class Constants {
-    public static readonly SLACK_WEB_HOOK="https://hooks.slack.com/services/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";
+    public static readonly SLACK_WEB_HOOK="https://hooks.slack.com/services/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";
 }

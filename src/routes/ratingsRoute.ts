@@ -32,7 +32,7 @@ router.get('/flow-data', async (req, res) => {
 
 function readMockJson() {
     const feedbacks = fs.readFileSync(path.resolve(__dirname, '../../mockData.json'), 'utf8');
-    return JSON.stringify(JSON.parse(feedbacks));
+    return JSON.stringify(JSON.parse(feedbacks), undefined, 4);
 };
 
 router.post('/flow', async (req, res) => {
