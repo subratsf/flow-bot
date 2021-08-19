@@ -1,9 +1,5 @@
 import express from 'express';
-import feedbackRoute from './routes/feedbackRoute';
-import helpRouter from './routes/helpRouter';
 import ratingRouter from './routes/ratingsRoute';
-import leaderBoard from './routes/leader-board';
-import mediaRoute from './routes/media-route';
 
 const app = express();
 app.use(function(req, res, next) {
@@ -23,11 +19,7 @@ app.get( "/", ( req, res ) => {
     res.send( `Server is running on ${port}.` );
 } );
 
-app.use(feedbackRoute);
-app.use(helpRouter);
 app.use(ratingRouter);
-app.use(leaderBoard);
-app.use(mediaRoute);
 
 // start the Express server
 app.listen( port, () => {

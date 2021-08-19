@@ -4,8 +4,9 @@ import * as path from 'path';
 const router = express.Router();
 import axios from 'axios';
 import {Constants} from './../constants';
-router.post('/flow-data', async (req, res) => {
+router.get('/flow-data', async (req, res) => {
     const jsonData = "```\n"+readMockJson()+"\n```";
+    try {
     const slackResult = await axios.post(Constants.SLACK_WEB_HOOK , 
         {
             "blocks": [
@@ -19,6 +20,10 @@ router.post('/flow-data', async (req, res) => {
             ]
         }
         )
+    } catch (e){
+        console.log("Exception");
+        console.log(e);
+    }
     res.header("Access-Control-Allow-Origin", "*");
     res.json({
         result: "Success."
@@ -27,7 +32,7 @@ router.post('/flow-data', async (req, res) => {
 
 function readMockJson() {
     const feedbacks = fs.readFileSync(path.resolve(__dirname, '../../mockData.json'), 'utf8');
-    return JSON.parse(feedbacks);
+    return JSON.stringify(JSON.parse(feedbacks));
 };
 
 router.post('/flow', async (req, res) => {
