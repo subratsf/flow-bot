@@ -1,0 +1,36 @@
+{
+    "Producers": [
+      {
+        "id": "12887",
+        "name": "",
+        "status": "running"
+      },
+      {
+        "id": "12847",
+        "name": "",
+        "status": "running"
+      }
+    ],
+    "Consumers": [
+      {
+        "id": "12887",
+        "name": "",
+        "status": "waiting for producer"
+      },
+      {
+        "id": "12847",
+        "name": "",
+        "status": "waiting for producer"
+      },
+      {
+        "id": "12059",
+        "name": "",
+        "status": "waiting for producer"
+      },
+      {
+        "id": "12081",
+        "name": "",
+        "status": "waiting for producer"
+      }
+    ]
+  }
