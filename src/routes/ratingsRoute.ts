@@ -25,7 +25,7 @@ router.get('/flow-data', async (req, res) => {
     }
     res.header("Access-Control-Allow-Origin", "*");
     res.json({
-        result: "Success."
+        result: jsonData
     })
 })
 
@@ -48,7 +48,7 @@ router.post('/flow', async (req, res) => {
                         "text": "Build Details!",
                         "emoji": true
                     },
-                    "image_url": "https://raw.githubusercontent.com/subratsf/flow-bot/main/flow-image.png",
+                    "image_url": "https://raw.githubusercontent.com/subratsf/flow-bot/master/flow-image.png",
                     "alt_text": "marg"
                 }
             ]
