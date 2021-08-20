@@ -3,11 +3,10 @@ import * as fs from 'fs';
 import * as path from 'path';
 const router = express.Router();
 import axios from 'axios';
-import {Constants} from './../constants';
 router.get('/flow-data', async (req, res) => {
     const jsonData = "```\n"+readMockJson()+"\n```";
     try {
-    const slackResult = await axios.post(Constants.SLACK_WEB_HOOK , 
+    const slackResult = await axios.post(process.env.SLACK_WEB_HOOK , 
         {
             "blocks": [
                 {
@@ -39,7 +38,7 @@ router.post('/flow', async (req, res) => {
     const feedback = req.query.q;
     const ts = new Date().toISOString();
     // send to slack
-    const slackResult = await axios.post(Constants.SLACK_WEB_HOOK , 
+    const slackResult = await axios.post(process.env.SLACK_WEB_HOOK , 
         {
             "blocks": [
                 {
