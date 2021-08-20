@@ -1,1 +1,36 @@
-{"result":[{"PrecheckinInfo":{"validations":{"WARNING":["CHANGELIST_SIGNATURE","CHANGE_CONTENT_SIGNATURE","WORK_ITEM","FILE_CONTENT"],"FULL":["GROVER_SCAN","PROGRAM_TEAM"],"METRICS":["REVIEW"],"CLIENT_WARNING":["SECURITY_ASSURANCE"],"DISABLED":["FAKE_SUBMIT"]},"stages":{"validations":[{"changelist":33860329,"unshelved-changelist":33860344,"username":"tok_gimlet","autobuild-name":"234_patch_precheckin","notify-addresses":["gimlet_scrum_team@salesforce.com"],"status":"FAIL","error-message":[],"results":{"WARNING":[{"valid":true,"name":"CHANGELIST_SIGNATURE","message":"Validation passed for [33860344].","time":"","error_code":0},{"valid":false,"name":"WORK_ITEM","message":"","time":"","error_code":0},{"valid":true,"name":"FILE_CONTENT","message":"No blacklisted file content was found.","time":"","error_code":0},{"valid":false,"name":"CHANGE_CONTENT_SIGNATURE","message":"Could not find a code review stage testing submission for change [33860329]!","time":"","error_code":0}],"FULL":[{"valid":false,"name":"PROGRAM_TEAM","message":"Could not find any GUS items in the changelist description!","time":"","error_code":0},{"valid":true,"name":"GROVER_SCAN","message":"No secrets were found in the changelist [33860344]","time":"","error_code":0}],"METRICS":[{"valid":false,"name":"REVIEW","message":"Could not find a code review test submission for changelist 33860329.","time":"","error_code":0}]}}]}},"producers":[{"id":"12887","name":"","status":"running"},{"id":"12847","name":"","status":"running"}],"consumers":[{"id":"12887","name":"","status":"waiting for producer"},{"id":"12847","name":"","status":"waiting for producer"},{"id":"12059","name":"","status":"waiting for producer"},{"id":"12081","name":"","status":"waiting for producer"}]}]}
+{
+    "Producers": [
+      {
+        "id": "12887",
+        "name": "",
+        "status": "running"
+      },
+      {
+        "id": "12847",
+        "name": "",
+        "status": "running"
+      }
+    ],
+    "Consumers": [
+      {
+        "id": "12887",
+        "name": "",
+        "status": "waiting for producer"
+      },
+      {
+        "id": "12847",
+        "name": "",
+        "status": "waiting for producer"
+      },
+      {
+        "id": "12059",
+        "name": "",
+        "status": "waiting for producer"
+      },
+      {
+        "id": "12081",
+        "name": "",
+        "status": "waiting for producer"
+      }
+    ]
+  }
