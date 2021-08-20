@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 const router = express.Router();
 import axios from 'axios';
-router.get('/flow-data', async (req, res) => {
+router.post('/flow-data', async (req, res) => {
     const jsonData = "```\n"+readMockJson()+"\n```";
     try {
     const slackResult = await axios.post(process.env.SLACK_WEB_HOOK , 
