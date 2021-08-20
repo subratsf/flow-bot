@@ -25,7 +25,7 @@ router.post('/flow-data', async (req, res) => {
     }
     res.header("Access-Control-Allow-Origin", "*");
     res.json({
-        result: jsonData
+        result: "Success!"
     })
 })
 
@@ -56,7 +56,7 @@ router.post('/flow', async (req, res) => {
         )
     res.header("Access-Control-Allow-Origin", "*");
     res.json({
-        result: "Success."
+        result: "Success!"
     })
 })
 
